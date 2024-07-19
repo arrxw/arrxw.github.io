@@ -1,0 +1,188 @@
+/* Estilos base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #7ac5f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('images/background.jpg'); /* Puedes agregar corazones azules al fondo */
+    background-size: cover;
+    flex-direction: column;
+}
+
+
+.input-container {
+    position: relative;
+    margin-top: 20px;
+    height: 40px; /* Altura inicial del contenedor */
+    overflow: hidden; /* Ocultar contenido fuera del contenedor */
+    transition: height 0.3s ease; /* Transición suave */
+    display: flex; /* Añadido */
+    justify-content: center; /* Añadido */
+    align-items: center; /* Añadido */
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #68d4ff;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    box-sizing: border-box; /* Añadido */
+}
+.login-container, .anniversary-container {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.login-box img {
+    width: 150px;
+}
+
+.login-box h2 {
+    color: #3679ff;
+
+}.login-box h5 {
+    color: #4a81ee;
+}
+.login-box input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border-color: #4a81ee;
+}
+
+.login-box button {
+    padding: 10px 20px;
+    background-color: #0055ff;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #3366ff;
+}
+
+#error-message {
+    color: red;
+}
+
+.anniversary-container h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+}
+
+.anniversary-container h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.photos img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.photos img:hover {
+    transform: scale(1.5);
+}   
+
+.letter {
+    margin-top: 20px;
+    background-color: #e7f1f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.letter-content {
+    text-align: left;
+    color: #000000;
+}
+
+
+/* Media queries */
+@media (max-width: 768px) {
+    .photos img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .letter {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 20px;
+    }
+
+    .login-box img {
+        width: 100px;
+    }
+
+    .anniversary-container h1 {
+        font-size: 2em;
+    }
+
+    .anniversary-container h2 {
+        font-size: 1.2em;
+    }
+
+    .photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photos img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .letter {
+        padding: 15px;
+    }
+}
+
+/* Añade estas reglas a tu archivo styles.css */
+
+.login-container,
+.anniversary-container {
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none; /* Esto hace que el elemento no sea clicable mientras es invisible */
+}
+
+.visible {
+    opacity: 1;
+}
